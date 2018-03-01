@@ -8,7 +8,7 @@ Reusable React Image lazy load component with progress bar to show the user load
  - Lazy load images to make your page load faster and put less stress on your server
  - Progressive load with blur transition to provide a better user experience
  - Progress spinner to give an instant feedback of the loading progress
- - Throttled `scroll` and `resize` listeners for better performance
+ - Throttled `scroll` listeners for better performance
  - Highly customizable yet can also work with minimum configuration
  - Mimics Instagram's way of loading image(placeholder -> preview -> source image)
 
@@ -66,6 +66,9 @@ ImageLoading.defaultProps = {
   spinnerSize: 80,
 };
 ```
+
+### Todo:
+ - Add `resize` listener
 
 ## Licence:
 MIT
