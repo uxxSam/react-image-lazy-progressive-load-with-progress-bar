@@ -3,6 +3,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import CircularProgress from 'material-ui/CircularProgress';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+import { throttle } from 'lodash';
 
 class ImageLoading extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class ImageLoading extends Component {
       loadedSrc: false,
       srcLoadingProgress: 0,
     };
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleScroll = throttle(this.handleScroll.bind(this), 300);
   }
 
   componentDidMount() {

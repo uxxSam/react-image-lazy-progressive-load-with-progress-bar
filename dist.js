@@ -26,6 +26,8 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _lodash = require('lodash');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48,7 +50,7 @@ var ImageLoading = function (_Component) {
       loadedSrc: false,
       srcLoadingProgress: 0
     };
-    _this.handleScroll = _this.handleScroll.bind(_this);
+    _this.handleScroll = (0, _lodash.throttle)(_this.handleScroll.bind(_this), 300);
     return _this;
   }
 
